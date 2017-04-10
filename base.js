@@ -18,3 +18,15 @@ function isUndef (value) {
     return value === undefined || value === null;
 }
 
+function makeMap (str, expectsLowerCase) {
+    const map = Object.create(null);
+
+    const list = Array<String> = str.split(,)
+    for (let i = 0; i < list.length; i++) {
+        map[list[i]] = true;
+    }
+
+    return ecpectsLowerCase 
+        ? val => map[val.toLowerCase()]
+        : val => map[val];
+}
