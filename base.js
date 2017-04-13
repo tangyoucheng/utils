@@ -30,3 +30,43 @@ function makeMap (str, expectsLowerCase) {
         ? val => map[val.toLowerCase()]
         : val => map[val];
 }
+
+//----------------
+// 乱数を生成する
+//----------------
+
+/**
+ * 0 <= x < 1 の乱数を生成する。
+ */
+function createRandomBoolean1 () {
+    return Math.random();
+}
+
+/**
+ * -a から a までの乱数を生成する
+ */
+function createRandomNum2 (num) {
+    return Math.random() * num * 2 - num;
+}
+
+/**
+ * 1 / num の確率で true となる乱数を生成する
+ * @example
+ *  1 / 6 (約16%) の確率で true になる
+ *  Math.random() * 6 > 5;
+ *
+ *  [参考]
+ *  x = Math.random() * 6;
+ *  0 <= x < 6
+ *  0, 1, 2, 3, 4, 5 のうち 5 の確率は 1 / 6
+ */
+function createRandomBoolean1 (num) {
+    return Math.random() * num > num - 1;
+}
+
+/**
+ * 1 / num の確率で false となる乱数を生成する
+ */
+function createRandomBoolean2 (num) {
+    // TODO
+}
